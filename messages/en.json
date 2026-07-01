@@ -1,0 +1,198 @@
+{
+  "showcase": {
+    "title": "Design System Showcase",
+    "subtitle": "Sprint 1 & 2 UI Components Implementation Overview",
+    "controls": {
+      "toggleTheme": "Toggle dark mode",
+      "switchToArabic": "العربية",
+      "switchToEnglish": "English"
+    },
+    "sections": {
+      "buttons": "1. Buttons",
+      "badges": "2. Badges",
+      "checkbox": "3. Checkbox",
+      "inputs": "4. Input Fields",
+      "advancedInputs": "5. Advanced Inputs",
+      "textareaSelect": "6. Textarea & Select",
+      "tabs": "7. Tabs (Segmented Control)",
+      "navigation": "8. Navigation",
+      "toast": "9. Toast Notifications"
+    },
+    "buttons": {
+      "primary": "Primary Button",
+      "loading": "Loading...",
+      "disabled": "Disabled State",
+      "secondary": "Secondary Button",
+      "outline": "Outline Button",
+      "ghost": "Ghost Button",
+      "destructive": "Destructive Button",
+      "withIcon": "With Left Icon",
+      "search": "Search"
+    },
+    "badges": {
+      "primary": "Primary Badge",
+      "secondary": "Secondary Badge",
+      "subtle": "Subtle Badge",
+      "outline": "Outline Badge",
+      "success": "Success",
+      "warning": "Warning",
+      "error": "Error",
+      "info": "Info"
+    },
+    "checkbox": {
+      "default": "Default Checkbox",
+      "indeterminate": "Indeterminate State",
+      "disabled": "Disabled Checkbox",
+      "error": "Error Checkbox",
+      "errorMessage": "You must accept terms and conditions"
+    },
+    "inputs": {
+      "standard": "Standard Input",
+      "standardPlaceholder": "Enter text here...",
+      "withIcon": "Input with Icon",
+      "searchPlaceholder": "Search...",
+      "password": "Password Input",
+      "passwordPlaceholder": "Enter your password",
+      "error": "Error State",
+      "errorPlaceholder": "Invalid input",
+      "errorMessage": "This field is required."
+    },
+    "advanced": {
+      "otpLabel": "OTP Input (Auto-advance & Paste)",
+      "otpCurrentValue": "Current Value:",
+      "otpNone": "None",
+      "fileUpload": "File Upload (Drag & Drop)"
+    },
+    "textarea": {
+      "default": "Default Textarea",
+      "defaultPlaceholder": "Write your message here...",
+      "autoResize": "Auto-resizing",
+      "autoResizePlaceholder": "Type a long message..."
+    },
+    "select": {
+      "default": "Default Select",
+      "option1": "Option 1",
+      "option2": "Option 2"
+    },
+    "combobox": {
+      "label": "Country (Combobox)",
+      "placeholder": "Select a country"
+    },
+    "countries": {
+      "eg": "Egypt",
+      "sa": "Saudi Arabia",
+      "ae": "United Arab Emirates"
+    },
+    "tabs": {
+      "active": "Active",
+      "inactive": "Inactive",
+      "disabled": "Disabled",
+      "updates": "Updates",
+      "content1": "Content for Tab 1",
+      "content2": "Content for Tab 2",
+      "contentUpdates": "You have 3 new updates!"
+    },
+    "navigation": {
+      "breadcrumbs": "Breadcrumbs",
+      "pagination": "Pagination"
+    },
+    "breadcrumbs": {
+      "home": "Home",
+      "designSystem": "Design System",
+      "components": "Components"
+    },
+    "toast": {
+      "success": "Success",
+      "error": "Error",
+      "warning": "Warning",
+      "info": "Info",
+      "successMessage": "Successful operation completed!",
+      "errorMessage": "Unsuccessful operation. Please try again.",
+      "warningMessage": "Please review your input before continuing.",
+      "infoMessage": "This is an informative message."
+    },
+    "nav": {
+      "previous": "Previous",
+      "next": "Next"
+    }
+  },
+  "auth": {
+    "switchLang": "العربية",
+    "langLabel": "Switch to Arabic",
+    "pageTitle": "Authentication"
+  },
+  "login": {
+    "title": "Welcome back!",
+    "subtitle": "Sign in to your account",
+    "email": "Email",
+    "username": "Username",
+    "password": "Password",
+    "forgotPassword": "Forgot your password?",
+    "rememberMe": "Remember me",
+    "button": "Login",
+    "noAccount": "Don't have an account yet?",
+    "register": "Create one now!",
+    "invalidCredentials": "Invalid username or password"
+  },
+  "register": {
+    "title": "Become part of our family!",
+    "firstName": "First Name",
+    "lastName": "Last Name",
+    "username": "Username",
+    "email": "Email",
+    "phone": "Phone",
+    "gender": "Gender",
+    "selectGender": "Select gender",
+    "male": "Male",
+    "female": "Female",
+    "password": "Password",
+    "confirmPassword": "Confirm Password",
+    "button": "Create Account",
+    "hasAccount": "Already have an account?",
+    "login": "Login",
+    "emailInUse": "Email already in use",
+    "success": "Account created successfully"
+  },
+  "validation": {
+    "invalidEmail": "Please enter a valid email address",
+    "requiredField": "This field is required",
+    "passwordWeak": "Password must be at least 8 characters with uppercase, lowercase, number, and special character",
+    "passwordMatch": "Passwords do not match",
+    "networkError": "Something went wrong. Please try again."
+  },
+  "forgotPassword": {
+    "title": "Forgot Password?",
+    "subtitle": "Don't worry, we'll send you instructions to help you reset it.",
+    "email": "Email",
+    "continue": "Continue",
+    "noAccount": "Don't have an account yet?",
+    "register": "Create one now!",
+    "noAccountFound": "No account found with this email",
+    "success": "OTP sent successfully to your email!" 
+  },
+  "otpCode": {
+    "title": "Enter the OTP Code",
+    "subtitle": "We have sent a 6-digit code to {email}",
+    "edit": "Edit",
+    "resend": "Send a new code",
+    "resendTimer": "Resend in {s}s",
+    "verify": "Verify OTP",
+    "needHelp": "Need help?",
+    "contact": "Contact us",
+    "invalidCode": "Invalid OTP code",
+    "expiredCode": "Code expired. Please request a new one.",
+    "resendSuccess": "A new OTP code has been sent to your email.",
+    "success": "Code verified successfully."
+  },
+  "resetPassword": {
+    "title": "Create a new password",
+    "subtitle": "Set a strong password to secure your account.",
+    "password": "Password",
+    "confirmPassword": "Confirm Password",
+    "button": "Reset Password",
+    "needHelp": "Need help?",
+    "contact": "Contact us",
+    "success": "Password reset successfully",
+    "diffFromOld": "New password must differ from current password"
+  }
+}

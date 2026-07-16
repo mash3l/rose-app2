@@ -192,7 +192,7 @@
     "noAccount": "Don't have an account yet?",
     "register": "Create one now!",
     "noAccountFound": "No account found with this email",
-    "success": "OTP sent successfully to your email!" 
+    "success": "OTP sent successfully to your email!"
   },
   "otpCode": {
     "title": "Enter the OTP Code",
@@ -218,6 +218,38 @@
     "contact": "Contact us",
     "success": "Password reset successfully",
     "diffFromOld": "New password must differ from current password"
+  },
+  "header": {
+    "searchPlaceholder": "Search for products...",
+    "searchDefault": "Products you may like",
+    "searchEmpty": "No products found",
+    "searchError": "Search failed. Try again.",
+    "login": "Login",
+    "wishlist": "Wishlist",
+    "cart": "Cart",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "deliverTo": "Deliver to:",
+    "hello": "Hello",
+    "notifications": "Notifications",
+    "logout": "Logout",
+    "myProfile": "My Profile",
+    "myAddresses": "My Addresses",
+    "myOrders": "My Orders",
+    "dashboard": "Dashboard",
+    "logout": "Logout"
+  },
+  "nav": {
+    "home": "Home",
+    "products": "Products",
+    "categories": "Categories",
+    "occasions": "Occasions",
+    "contact": "Contact",
+    "about": "About"
+  },
+  "product": {
+    "priceValue": "{amount} EGP",
+    "addToCart": "Add to cart",
+    "addToWishlist": "Add to wishlist"
   }
-  
 }

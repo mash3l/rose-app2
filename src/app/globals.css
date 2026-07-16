@@ -19,6 +19,8 @@
   --danger: #ef4444;
   --success: #00bc7d;
   --warning: #facc15;
+  --header-bg: #ffffff;
+  --header-foreground: #fafafa;
 }
 
 html[data-theme="dark"] {
@@ -38,6 +40,8 @@ html[data-theme="dark"] {
   --danger: #ef4444;
   --success: #00bc7d;
   --warning: #facc15;
+  --header-bg: #18181b;
+  --header-foreground: #fafafa;
 }
 
 @theme inline {
@@ -57,6 +61,8 @@ html[data-theme="dark"] {
   --color-danger: var(--danger);
   --color-success: var(--success);
   --color-warning: var(--warning);
+  --color-header-bg: var(--header-bg);
+  --color-header-foreground: var(--header-foreground);
 
   --color-maroon-50: #fbeaea;
   --color-maroon-100: #f3c5c7;
@@ -170,11 +176,10 @@ html[data-theme="dark"] {
 
   --variant-loading: data-loading;
 
-  /* دي الخطوة اللي بتربط الـ Variable بـ Tailwind */
+  /* Font family bindings */
   --font-edwardian: "Edwardian Script ITC", serif;
   --font-cairo: "Cairo", sans-serif;
-  
-  /* ضيف السطور دي عشان الـ Utility classes تشتغل */
+
   --font-family-edwardian: var(--font-edwardian);
   --font-family-cairo: var(--font-cairo);
 }
@@ -195,7 +200,7 @@ html[dir="rtl"] body {
   font-family: var(--font-tajawal), Arial, Helvetica, sans-serif;
 }
 
-/* ─── Autofill fix — يمنع الـ browser من تلوين الـ input بالأزرق ──────────── */
+/* Autofill fix: prevents the browser from tinting the input blue */
 input:-webkit-autofill,
 input:-webkit-autofill:hover,
 input:-webkit-autofill:focus,
@@ -205,4 +210,3 @@ input:-webkit-autofill:active {
   caret-color: var(--foreground);
   transition: background-color 5000s ease-in-out 0s;
 }
-

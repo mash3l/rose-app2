@@ -36,6 +36,7 @@ export interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
   leftIcon?: ReactNode;
   rightIcon?: ReactNode;
   locale?: InputLocale;
+  height?: number;
 }
 
 export const Input = forwardRef<HTMLInputElement, InputProps>(
@@ -51,6 +52,7 @@ export const Input = forwardRef<HTMLInputElement, InputProps>(
       disabled,
       locale = "en",
       id,
+      height = 49,
       ...props
     },
     forwardedRef,
@@ -133,7 +135,7 @@ export const Input = forwardRef<HTMLInputElement, InputProps>(
             aria-invalid={!!error}
             aria-describedby={errorId}
             className={[
-              "flex w-full h-[49px] rounded-[10px] border bg-card text-foreground transition-colors",
+              "flex w-full rounded-[10px] border bg-card text-foreground transition-colors",
               "text-base font-normal placeholder:text-muted-foreground",
               "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/40",
               "disabled:cursor-not-allowed disabled:bg-muted disabled:text-muted-foreground disabled:border-muted",
@@ -149,6 +151,7 @@ export const Input = forwardRef<HTMLInputElement, InputProps>(
                 ? "p-0 pe-4 file:bg-primary-light dark:file:bg-primary/20 file:text-primary file:border-0 file:h-full file:px-4 file:me-4 file:font-medium file:cursor-pointer hover:file:bg-primary/10 transition-all cursor-pointer"
                 : "",
             ].join(" ")}
+            style={{ height: `${height}px` }}
             {...props}
           />
 

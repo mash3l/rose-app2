@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Sarabun, Tajawal, Cairo } from "next/font/google";
 import localFont from "next/font/local";
 import { NextIntlClientProvider } from "next-intl";
-import { getMessages } from "next-intl/server";
+import { getMessages, setRequestLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
 
@@ -10,6 +10,10 @@ import { QueryProvider } from "@/providers/QueryProvider";
 import { DynamicThemeProvider } from "@/components/dynamic-theme-provider";
 import { ToastProvider } from "@/shared/ui/ToastProvider";
 import "@/app/globals.css";
+
+export function generateStaticParams() {
+  return routing.locales.map((locale) => ({ locale }));
+}
 
 const sarabun = Sarabun({
   variable: "--font-sarabun",
@@ -43,11 +47,13 @@ export const metadata: Metadata = {
 export default async function RootLayout({
   children,
   params,
-}: Readonly<{
+}: {
   children: React.ReactNode;
   params: Promise<{ locale: string }>;
-}>) {
+}) {
   const { locale } = await params;
+
+  setRequestLocale(locale);
 
   if (!routing.locales.includes(locale as (typeof routing.locales)[number])) {
     notFound();
@@ -67,7 +73,7 @@ export default async function RootLayout({
           tajawal.variable,
           cairo.variable,
           edwardianScript.variable,
-          "flex min-h-full flex-col antialiased",
+          "flex min-h-screen flex-col antialiased",
         ].join(" ")}
         suppressHydrationWarning
       >
@@ -79,7 +85,9 @@ export default async function RootLayout({
         >
           <NextIntlClientProvider messages={messages} locale={locale}>
             <QueryProvider>
-              <ToastProvider>{children}</ToastProvider>
+              <ToastProvider>
+                <main className="flex-1">{children}</main>
+              </ToastProvider>
             </QueryProvider>
           </NextIntlClientProvider>
         </DynamicThemeProvider>

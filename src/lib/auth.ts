@@ -17,6 +17,17 @@ export const authOptions: NextAuthOptions = {
           return null;
         }
 
+        // --- Mock Login Setup ---
+        // الدخول الوهمي لاختبار الواجهة: بنرجع بيانات وهمية وتوكن وهمي
+        // أي يوزر وباسورد هتكتبهم هيعديك ويدخلك
+        return {
+          id: credentials.username,
+          token: "mock-jwt-token-123456",
+          name: credentials.username,
+        };
+
+        // --- الكود الأصلي للباك إند (موقوف مؤقتاً) ---
+        /*
         try {
           const response = await fetch(`${API_BASE_URL}/api/auth/login`, {
             method: "POST",
@@ -43,6 +54,7 @@ export const authOptions: NextAuthOptions = {
         } catch {
           return null;
         }
+        */
       },
     }),
   ],

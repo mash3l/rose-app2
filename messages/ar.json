@@ -218,5 +218,38 @@
     "contact": "تواصل معنا",
     "success": "تمت إعادة تعيين كلمة المرور بنجاح",
     "diffFromOld": "يجب أن تختلف كلمة المرور الجديدة عن الحالية"
+  },
+  "header": {
+    "searchPlaceholder": "ابحث عن منتجات...",
+    "searchDefault": "منتجات قد تعجبك",
+    "searchEmpty": "لا توجد منتجات",
+    "searchError": "فشل البحث. حاول مجدداً.",
+    "login": "تسجيل الدخول",
+    "wishlist": "المفضلة",
+    "cart": "السلة",
+    "openMenu": "فتح القائمة",
+    "closeMenu": "إغلاق القائمة",
+    "deliverTo": "التوصيل إلى:",
+    "hello": "مرحباً",
+    "notifications": "الإشعارات",
+    "logout": "تسجيل الخروج",
+    "myProfile": "حسابي",
+    "myAddresses": "عناويني",
+    "myOrders": "طلباتي",
+    "dashboard": "لوحة التحكم",
+    "logout": "تسجيل الخروج"
+  },
+  "nav": {
+    "home": "الرئيسية",
+    "products": "المنتجات",
+    "categories": "الفئات",
+    "occasions": "المناسبات",
+    "contact": "تواصل معنا",
+    "about": "عن الموقع"
+  },
+  "product": {
+    "priceValue": "{amount} ج.م",
+    "addToCart": "أضف إلى السلة",
+    "addToWishlist": "أضف إلى المفضلة"
   }
 }

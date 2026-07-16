@@ -43,6 +43,11 @@ export function NotificationsDropdown({
 
   // Variables (derived)
   const notifications = (fetchedNotifications ?? [])
+    .slice()
+    .sort(
+      (a, b) =>
+        new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime(),
+    )
     .filter((notification) => !deletedIds.has(notification.id))
     .map((notification) => ({
       ...notification,

@@ -1,6 +1,5 @@
 import { Suspense } from "react";
 import { HeaderServer } from "@/features/header/components/header-server";
-import { SecondaryNav } from "@/features/header/components/secondary-nav";
 
 export default function MainLayout({
   children,
@@ -17,7 +16,6 @@ export default function MainLayout({
         >
           <HeaderServer />
         </Suspense>
-        <SecondaryNav />
       </header>
       <main className="flex-1">{children}</main>
     </>

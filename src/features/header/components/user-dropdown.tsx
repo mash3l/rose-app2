@@ -15,6 +15,15 @@ import { signOut } from "next-auth/react";
 import { Link } from "@/i18n/routing";
 import type { UserRole } from "@/lib/auth";
 
+function getInitials(name: string) {
+  return name
+    .trim()
+    .split(/\s+/)
+    .slice(0, 2)
+    .map((part) => part[0]?.toUpperCase() ?? "")
+    .join("");
+}
+
 interface UserDropdownProps {
   userName: string;
   userRole?: UserRole;
@@ -45,6 +54,9 @@ export function UserDropdown({ userName, userRole }: UserDropdownProps) {
         onClick={() => setIsOpen(!isOpen)}
         className="flex items-center gap-1.5 rounded-md px-1 text-body font-normal text-muted-foreground transition-colors hover:text-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/40"
       >
+        <span className="flex size-8 shrink-0 items-center justify-center rounded-full bg-primary text-xs font-semibold text-primary-foreground">
+          {getInitials(userName)}
+        </span>
         <div className="flex flex-col text-start">
           <span className="text-xs leading-none opacity-70">{t("hello")}</span>
           <span className="font-semibold leading-none">{userName}</span>

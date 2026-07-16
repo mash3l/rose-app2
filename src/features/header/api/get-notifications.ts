@@ -58,5 +58,6 @@ export function useNotificationsQuery(accessToken?: string) {
     queryKey: ["notifications", accessToken],
     queryFn: () => fetchNotifications(accessToken as string),
     enabled: Boolean(accessToken),
+    refetchInterval: 30_000,
   });
 }

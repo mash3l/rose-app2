@@ -1,0 +1,222 @@
+{
+  "showcase": {
+    "title": "معرض نظام التصميم",
+    "subtitle": "نظرة عامة على تنفيذ مكونات واجهة المستخدم (Sprint 1 & 2)",
+    "controls": {
+      "toggleTheme": "تبديل الوضع الداكن",
+      "switchToArabic": "العربية",
+      "switchToEnglish": "English"
+    },
+    "sections": {
+      "buttons": "1. الأزرار",
+      "badges": "2. الشارات",
+      "checkbox": "3. مربع الاختيار",
+      "inputs": "4. حقول الإدخال",
+      "advancedInputs": "5. مدخلات متقدمة",
+      "textareaSelect": "6. منطقة النص والقائمة",
+      "tabs": "7. علامات التبويب",
+      "navigation": "8. التنقل",
+      "toast": "9. إشعارات التنبيه"
+    },
+    "buttons": {
+      "primary": "زر أساسي",
+      "loading": "جاري التحميل...",
+      "disabled": "حالة التعطيل",
+      "secondary": "زر ثانوي",
+      "outline": "زر مفرغ",
+      "ghost": "زر شفاف",
+      "destructive": "زر خطر (حذف)",
+      "withIcon": "مع أيقونة",
+      "search": "بحث"
+    },
+    "badges": {
+      "primary": "شارة أساسية",
+      "secondary": "شارة ثانوية",
+      "subtle": "شارة خفيفة",
+      "outline": "شارة مفرغة",
+      "success": "نجاح",
+      "warning": "تحذير",
+      "error": "خطأ",
+      "info": "معلومة"
+    },
+    "checkbox": {
+      "default": "مربع اختيار افتراضي",
+      "indeterminate": "حالة غير محددة",
+      "disabled": "مربع اختيار معطل",
+      "error": "مربع اختيار بخطأ",
+      "errorMessage": "يجب عليك قبول الشروط والأحكام"
+    },
+    "inputs": {
+      "standard": "إدخال قياسي",
+      "standardPlaceholder": "أدخل النص هنا...",
+      "withIcon": "إدخال مع أيقونة",
+      "searchPlaceholder": "بحث...",
+      "password": "إدخال كلمة المرور",
+      "passwordPlaceholder": "أدخل كلمة المرور",
+      "error": "حالة الخطأ",
+      "errorPlaceholder": "إدخال غير صالح",
+      "errorMessage": "هذا الحقل مطلوب."
+    },
+    "advanced": {
+      "otpLabel": "إدخال OTP (تقدم تلقائي ولصق)",
+      "otpCurrentValue": "القيمة الحالية:",
+      "otpNone": "لا شيء",
+      "fileUpload": "رفع ملف (سحب وإفلات)"
+    },
+    "textarea": {
+      "default": "منطقة نص افتراضية",
+      "defaultPlaceholder": "اكتب رسالتك هنا...",
+      "autoResize": "تغيير حجم تلقائي",
+      "autoResizePlaceholder": "اكتب رسالة طويلة..."
+    },
+    "select": {
+      "default": "قائمة افتراضية",
+      "option1": "الخيار 1",
+      "option2": "الخيار 2"
+    },
+    "combobox": {
+      "label": "الدولة (قائمة منسدلة)",
+      "placeholder": "اختر دولة"
+    },
+    "countries": {
+      "eg": "مصر",
+      "sa": "المملكة العربية السعودية",
+      "ae": "الإمارات العربية المتحدة"
+    },
+    "tabs": {
+      "active": "نشط",
+      "inactive": "غير نشط",
+      "disabled": "معطل",
+      "updates": "تحديثات",
+      "content1": "محتوى التبويب 1",
+      "content2": "محتوى التبويب 2",
+      "contentUpdates": "لديك 3 تحديثات جديدة!"
+    },
+    "navigation": {
+      "breadcrumbs": "مسار التنقل",
+      "pagination": "ترقيم الصفحات"
+    },
+    "breadcrumbs": {
+      "home": "الرئيسية",
+      "designSystem": "نظام التصميم",
+      "components": "المكونات"
+    },
+    "toast": {
+      "success": "نجاح",
+      "error": "خطأ",
+      "warning": "تحذير",
+      "info": "معلومة",
+      "successMessage": "تمت العملية بنجاح!",
+      "errorMessage": "فشلت العملية. يرجى المحاولة مرة أخرى.",
+      "warningMessage": "يرجى مراجعة المدخلات قبل المتابعة.",
+      "infoMessage": "هذه رسالة إعلامية."
+    },
+    "nav": {
+      "previous": "السابق",
+      "next": "التالي"
+    }
+  },
+  "auth": {
+    "switchLang": "English",
+    "langLabel": "التحويل إلى الإنجليزية",
+    "pageTitle": "المصادقة"
+  },
+  "login": {
+    "title": "مرحباً بعودتك!",
+    "subtitle": "سجّل الدخول إلى حسابك",
+    "email": "البريد الإلكتروني",
+    "username": "اسم المستخدم",
+    "password": "كلمة المرور",
+    "forgotPassword": "نسيت كلمة المرور؟",
+    "rememberMe": "تذكرني",
+    "button": "تسجيل الدخول",
+    "noAccount": "ليس لديك حساب؟",
+    "register": "أنشئ حساباً الآن!",
+    "invalidCredentials": "اسم المستخدم أو كلمة المرور غير صحيحة"
+  },
+  "register": {
+    "title": "كوني جزءاً من عائلتنا!",
+    "firstName": "الاسم الأول",
+    "lastName": "اسم العائلة",
+    "username": "اسم المستخدم",
+    "email": "البريد الإلكتروني",
+    "phone": "رقم الهاتف",
+    "gender": "الجنس",
+    "selectGender": "اختر الجنس",
+    "male": "ذكر",
+    "female": "أنثى",
+    "password": "كلمة المرور",
+    "confirmPassword": "تأكيد كلمة المرور",
+    "button": "إنشاء حساب",
+    "hasAccount": "لديك حساب بالفعل؟",
+    "login": "تسجيل الدخول",
+    "emailInUse": "البريد الإلكتروني مستخدم بالفعل",
+    "success": "تم إنشاء الحساب بنجاح",
+    "next": "التالي",
+    "createAccount": "إنشاء حساب",
+    "step2Title": "أدخل رمز التحقق",
+    "step3Title": "أخبرنا المزيد عنك",
+    "step3Description": "بعض التفاصيل للبدء",
+    "step4Title": "أنشئ كلمة مرور قوية",
+    "step4Description": "اختر كلمة مرور آمنة لحماية حسابك",
+    "otpSentTo": "لقد أرسلنا رمزًا مكونًا من 6 أرقام إلى {email}",
+    "edit": "تعديل",
+    "resend": "إرسال رمز جديد",
+    "resendTimer": "إعادة الإرسال خلال {s} ث",
+    "resendSuccess": "تم إرسال رمز تحقق جديد إلى بريدك الإلكتروني.",
+    "invalidCode": "رمز التحقق غير صحيح",
+    "expiredCode": "انتهت صلاحية الرمز. يرجى طلب رمز جديد.",
+    "verifyCode": "تحقق من الرمز",
+    "otpLabel": "رمز التحقق",
+    "stepAriaLabel": "الخطوة {step}",
+    "emailPlaceholder": "user@example.com",
+    "firstNamePlaceholder": "محمد",
+    "lastNamePlaceholder": "أحمد",
+    "usernamePlaceholder": "mohamed",
+    "phonePlaceholder": "1012345678",
+    "passwordPlaceholder": "Password@12345",
+    "confirmPasswordPlaceholder": "••••••••"
+  },
+  "validation": {
+    "invalidEmail": "يرجى إدخال بريد إلكتروني صحيح",
+    "requiredField": "هذا الحقل مطلوب",
+    "passwordWeak": "يجب أن تحتوي كلمة المرور على 8 أحرف على الأقل وتشمل: حرف كبير وصغير ورقم ورمز خاص",
+    "passwordMatch": "كلمتا المرور غير متطابقتين",
+    "networkError": "حدث خطأ ما. يرجى المحاولة مجدداً."
+  },
+  "forgotPassword": {
+    "title": "نسيت كلمة المرور؟",
+    "subtitle": "لا تقلق، سنرسل لك تعليمات لمساعدتك في استعادتها.",
+    "email": "البريد الإلكتروني",
+    "continue": "متابعة",
+    "noAccount": "ليس لديك حساب؟",
+    "register": "أنشئ حساباً الآن!",
+    "noAccountFound": "لا يوجد حساب مسجل بهذا البريد",
+    "success": "تم إرسال رمز التحقق بنجاح إلى بريدك الإلكتروني!"
+  },
+  "otpCode": {
+    "title": "أدخل رمز التحقق",
+    "subtitle": "أرسلنا رمزاً مكوناً من 6 أرقام إلى {email}",
+    "edit": "تعديل",
+    "resend": "أرسل رمزاً جديداً",
+    "resendTimer": "أعد الإرسال خلال {s} ثانية",
+    "verify": "تحقق من الرمز",
+    "needHelp": "تحتاج مساعدة؟",
+    "contact": "تواصل معنا",
+    "invalidCode": "رمز التحقق غير صحيح",
+    "expiredCode": "انتهت صلاحية الرمز. يرجى طلب رمز جديد.",
+    "resendSuccess": "تم إرسال رمز تحقق جديد إلى بريدك الإلكتروني.",
+    "success": "تم التحقق من الرمز بنجاح."
+  },
+  "resetPassword": {
+    "title": "إنشاء كلمة مرور جديدة",
+    "subtitle": "حدد كلمة مرور قوية لتأمين حسابك.",
+    "password": "كلمة المرور",
+    "confirmPassword": "تأكيد كلمة المرور",
+    "button": "إعادة تعيين كلمة المرور",
+    "needHelp": "تحتاج مساعدة؟",
+    "contact": "تواصل معنا",
+    "success": "تمت إعادة تعيين كلمة المرور بنجاح",
+    "diffFromOld": "يجب أن تختلف كلمة المرور الجديدة عن الحالية"
+  }
+}

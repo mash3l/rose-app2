@@ -13,12 +13,14 @@ import { useTranslations } from "next-intl";
 import { signOut } from "next-auth/react";
 
 import { Link } from "@/i18n/routing";
+import type { UserRole } from "@/lib/auth";
 
 interface UserDropdownProps {
   userName: string;
+  userRole?: UserRole;
 }
 
-export function UserDropdown({ userName }: UserDropdownProps) {
+export function UserDropdown({ userName, userRole }: UserDropdownProps) {
   const t = useTranslations("header");
   const [isOpen, setIsOpen] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
@@ -90,14 +92,17 @@ export function UserDropdown({ userName }: UserDropdownProps) {
               <FileText size={16} />
               {t("myOrders")}
             </Link>
-            <Link
-              href="/dashboard"
-              onClick={() => setIsOpen(false)}
-              className="flex items-center gap-3 px-4 py-2 text-sm text-zinc-700 transition-colors hover:bg-zinc-100 dark:text-zinc-300 dark:hover:bg-zinc-700/50"
-            >
-              <LayoutDashboard size={16} />
-              {t("dashboard")}
-            </Link>
+
+            {userRole === "ADMIN" && (
+              <Link
+                href="/dashboard"
+                onClick={() => setIsOpen(false)}
+                className="flex items-center gap-3 px-4 py-2 text-sm text-zinc-700 transition-colors hover:bg-zinc-100 dark:text-zinc-300 dark:hover:bg-zinc-700/50"
+              >
+                <LayoutDashboard size={16} />
+                {t("dashboard")}
+              </Link>
+            )}
           </div>
 
           <div className=" border-t border-zinc-100 py-1 dark:border-zinc-700/50">

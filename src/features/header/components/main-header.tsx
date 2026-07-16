@@ -12,10 +12,13 @@ import { SearchBar } from "@/features/header/components/search-bar";
 import { UserDropdown } from "@/features/header/components/user-dropdown";
 import { NotificationsDropdown } from "@/features/header/components/notifications-dropdown";
 import { MobileMenuDrawer } from "@/features/header/components/mobile-menu-drawer";
+import { SecondaryNav } from "@/features/header/components/secondary-nav";
+import type { UserRole } from "@/lib/auth";
 
 interface MainHeaderProps {
   isAuthenticated?: boolean;
   userName?: string;
+  userRole?: UserRole;
   deliveryLocation?: string;
   cartCount?: number;
   notificationCount?: number;
@@ -24,6 +27,7 @@ interface MainHeaderProps {
 export function MainHeader({
   isAuthenticated = false,
   userName = "",
+  userRole,
   deliveryLocation = "",
   cartCount = 0,
   notificationCount = 0,
@@ -35,7 +39,7 @@ export function MainHeader({
   const closeMobileMenu = () => setIsMobileMenuOpen(false);
 
   return (
-    <div className="w-full bg-header-bg">
+    <div className="sticky top-0 z-40 w-full bg-header-bg">
       <div className="mx-auto flex w-full max-w-[1920px] flex-col gap-3 px-4 py-3 lg:h-[88px] lg:flex-row lg:items-center lg:gap-4 lg:px-9 lg:py-[18px]">
         <div className="flex w-full items-center justify-between gap-3 lg:w-auto lg:justify-start">
           <Logo />
@@ -73,8 +77,7 @@ export function MainHeader({
 
         <div className="hidden h-[52px] items-center gap-1.5 border-s border-zinc-400 ps-4 lg:flex">
           {isAuthenticated ? (
-            // التعديل هنا: استخدمنا المكون بتاعك بدل الزرار الثابت
-            <UserDropdown userName={userName} />
+            <UserDropdown userName={userName} userRole={userRole} />
           ) : (
             <Link
               href="/login"
@@ -88,7 +91,7 @@ export function MainHeader({
 
         <div className="hidden h-[52px] items-center gap-4 border-s border-zinc-400 ps-4 lg:flex">
           <Link
-            href="/wishlist"
+            href={isAuthenticated ? "/wishlist" : "/login"}
             aria-label={t("wishlist")}
             className="flex items-center justify-center rounded-md p-1 text-muted-foreground transition-colors hover:text-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/40"
           >
@@ -96,12 +99,12 @@ export function MainHeader({
           </Link>
 
           <Link
-            href="/cart"
+            href={isAuthenticated ? "/cart" : "/login"}
             aria-label={t("cart")}
             className="relative flex items-center justify-center rounded-md p-1 text-muted-foreground transition-colors hover:text-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/40"
           >
             <ShoppingCart size={20} aria-hidden />
-            {cartCount > 0 && (
+            {isAuthenticated && cartCount > 0 && (
               <span className="absolute -right-1 -top-1 flex h-4 min-w-[16px] items-center justify-center rounded-full bg-red-600 px-[3px] text-[10px] font-bold text-white">
                 {cartCount}
               </span>
@@ -119,11 +122,14 @@ export function MainHeader({
         </div>
       </div>
 
+      <SecondaryNav />
+
       <MobileMenuDrawer
         isOpen={isMobileMenuOpen}
         onClose={closeMobileMenu}
         isAuthenticated={isAuthenticated}
         userName={userName}
+        userRole={userRole}
         deliveryLocation={deliveryLocation}
         cartCount={cartCount}
         notificationCount={notificationCount}

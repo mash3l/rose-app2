@@ -251,5 +251,18 @@
     "priceValue": "{amount} ج.م",
     "addToCart": "أضف إلى السلة",
     "addToWishlist": "أضف إلى المفضلة"
-  }
+  },
+  "notifications": {
+  "title": "الإشعارات",
+  "markAllRead": "تعيين الكل كمقروء",
+  "clearAll": "حذف الكل",
+  "markRead": "تعيين كمقروء",
+  "delete": "حذف",
+  "empty": "لا توجد إشعارات حتى الآن",
+  "loadError": "تعذر تحميل الإشعارات",
+  "justNow": "الآن",
+  "minutesAgo": "منذ {count} د",
+  "hoursAgo": "منذ {count} س",
+  "daysAgo": "منذ {count} يوم"
+}
 }

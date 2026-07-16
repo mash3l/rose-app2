@@ -251,5 +251,18 @@
     "priceValue": "{amount} EGP",
     "addToCart": "Add to cart",
     "addToWishlist": "Add to wishlist"
-  }
+  },
+  "notifications": {
+  "title": "Notifications",
+  "markAllRead": "Mark all as read",
+  "clearAll": "Clear all",
+  "markRead": "Mark as read",
+  "delete": "Delete",
+  "empty": "No notifications yet",
+  "loadError": "Could not load notifications",
+  "justNow": "Just now",
+  "minutesAgo": "{count}m ago",
+  "hoursAgo": "{count}h ago",
+  "daysAgo": "{count}d ago"
+}
 }

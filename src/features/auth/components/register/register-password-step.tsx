@@ -68,7 +68,12 @@ export function RegisterPasswordStep({
       const response = await fetch(`${API_BASE_URL}/api/auth/register`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ ...userInfo, email, password, confirmPassword }),
+        body: JSON.stringify({
+          ...userInfo,
+          email,
+          password,
+          confirmPassword,
+        }),
       });
 
       const json = await response.json();

@@ -8,11 +8,16 @@ import { Input, type InputLocale } from "@/shared/ui/Input";
 import { Button, type ButtonLocale } from "@/shared/ui/Button";
 import { Select } from "@/shared/ui/Select";
 
+const USERNAME_PATTERN = /^[A-Za-z0-9_]+$/;
+
 const buildUserInfoSchema = (t: (key: string) => string) =>
   z.object({
     firstName: z.string().min(1, t("requiredField")),
     lastName: z.string().min(1, t("requiredField")),
-    username: z.string().min(1, t("requiredField")),
+    username: z
+      .string()
+      .min(1, t("requiredField"))
+      .regex(USERNAME_PATTERN, t("usernameInvalid")),
     phone: z.string().min(1, t("requiredField")),
     gender: z.enum(["MALE", "FEMALE"], { message: t("requiredField") }),
   });

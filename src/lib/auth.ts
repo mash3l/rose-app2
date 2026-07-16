@@ -1,8 +1,53 @@
 import { NextAuthOptions } from "next-auth";
+import type { DefaultSession } from "next-auth";
 import CredentialsProvider from "next-auth/providers/credentials";
+
+export type UserRole = "USER" | "ADMIN";
+
+declare module "next-auth" {
+  interface Session {
+    user: DefaultSession["user"] & { role: UserRole };
+    accessToken?: string;
+  }
+  interface User {
+    role: UserRole;
+  }
+}
+
+declare module "next-auth/jwt" {
+  interface JWT {
+    role: UserRole;
+  }
+}
 
 const API_BASE_URL =
   process.env.NEXT_PUBLIC_API_URL || "https://rose-app.elevate-bootcamp.cloud";
+
+interface LoginApiUser {
+  id: string;
+  username: string;
+  email: string;
+  phone: string | null;
+  firstName: string;
+  lastName: string;
+  gender: string;
+  emailVerified: boolean;
+  phoneVerified: boolean;
+  role: UserRole;
+}
+
+interface LoginApiResponse {
+  status: boolean;
+  code: number;
+  payload: {
+    user: LoginApiUser;
+    token: string;
+  };
+}
+
+function buildFullName(user: LoginApiUser) {
+  return `${user.firstName} ${user.lastName}`.trim();
+}
 
 export const authOptions: NextAuthOptions = {
   providers: [
@@ -17,17 +62,6 @@ export const authOptions: NextAuthOptions = {
           return null;
         }
 
-        // --- Mock Login Setup ---
-        // الدخول الوهمي لاختبار الواجهة: بنرجع بيانات وهمية وتوكن وهمي
-        // أي يوزر وباسورد هتكتبهم هيعديك ويدخلك
-        return {
-          id: credentials.username,
-          token: "mock-jwt-token-123456",
-          name: credentials.username,
-        };
-
-        // --- الكود الأصلي للباك إند (موقوف مؤقتاً) ---
-        /*
         try {
           const response = await fetch(`${API_BASE_URL}/api/auth/login`, {
             method: "POST",
@@ -40,21 +74,23 @@ export const authOptions: NextAuthOptions = {
             }),
           });
 
-          const data = await response.json();
+          const data: LoginApiResponse = await response.json();
 
-          if (response.ok && data.status) {
-            return {
-              id: credentials.username,
-              token: data.payload,
-              name: credentials.username,
-            };
+          if (!response.ok || !data.status) {
+            return null;
           }
 
-          return null;
+          const { user, token } = data.payload;
+
+          return {
+            id: user.id,
+            token,
+            name: buildFullName(user),
+            role: user.role,
+          };
         } catch {
           return null;
         }
-        */
       },
     }),
   ],
@@ -65,11 +101,13 @@ export const authOptions: NextAuthOptions = {
     async jwt({ token, user }) {
       if (user) {
         token.accessToken = (user as { token?: string }).token;
+        token.role = (user as { role: UserRole }).role;
       }
       return token;
     },
     async session({ session, token }) {
-      (session as { accessToken?: unknown }).accessToken = token.accessToken;
+      session.accessToken = token.accessToken as string | undefined;
+      session.user.role = token.role;
       return session;
     },
   },
